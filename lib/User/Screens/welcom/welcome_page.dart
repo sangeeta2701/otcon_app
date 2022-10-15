@@ -15,7 +15,7 @@ class _WelcomePgeState extends State<WelcomePge> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 6), () {
+    Future.delayed(Duration(seconds: 9), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(

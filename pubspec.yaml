@@ -33,6 +33,7 @@ dependencies:
   loading_animation_widget: ^1.2.0+3
   google_fonts: ^3.0.1
   dotted_border: ^2.0.0+2
+  animated_bottom_navigation_bar: ^1.1.0
   flutter:
     sdk: flutter
 
