@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:otcon/User/Screens/My%20Schedule/my_schedule_page.dart';
+import 'package:otcon/User/Screens/Notifications/notification_page.dart';
+import 'package:otcon/User/Screens/Schedule/schedule_page.dart';
+import 'package:otcon/utils/constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,126 +13,133 @@ class HomeScreen extends StatefulWidget {
 
 class _MyWidgetState extends State<HomeScreen> {
   var currentIndex = 0;
+  final List<Widget> screens = [
+    MySchedulePage(),
+    SchedulePage(),
+    NotificationPage()
+  ];
+
+  final PageStorageBucket bucket = PageStorageBucket();
+  Widget currentScreen = MySchedulePage();
 
   @override
   Widget build(BuildContext context) {
-    double displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: Container(
-        margin: EdgeInsets.all(displayWidth * .05),
-        height: displayWidth * .155,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(.1),
-              blurRadius: 30,
-              offset: Offset(0, 10),
-            ),
-          ],
-          borderRadius: BorderRadius.circular(50),
-        ),
-        child: ListView.builder(
-          itemCount: 3,
-          scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.symmetric(horizontal: displayWidth * .02),
-          itemBuilder: (context, index) => InkWell(
-            onTap: () {
-              setState(() {
-                currentIndex = index;
-                HapticFeedback.lightImpact();
-              });
-            },
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            child: Stack(
-              children: [
-                AnimatedContainer(
-                  duration: Duration(seconds: 2),
-                  curve: Curves.fastLinearToSlowEaseIn,
-                  width: index == currentIndex
-                      ? displayWidth * .35
-                      : displayWidth * .18,
-                  alignment: Alignment.center,
-                  child: AnimatedContainer(
-                    duration: Duration(seconds: 1),
-                    curve: Curves.fastLinearToSlowEaseIn,
-                    height: index == currentIndex ? displayWidth * .12 : 0,
-                    width: index == currentIndex ? displayWidth * .40 : 0,
-                    decoration: BoxDecoration(
-                      color: index == currentIndex
-                          ? Colors.blue.withOpacity(.2)
-                          : Colors.transparent,
-                      borderRadius: BorderRadius.circular(50),
+      body: PageStorage(bucket: bucket, child: currentScreen),
+      bottomNavigationBar: BottomAppBar(
+        //   shape: CircularNotchedRectangle(),
+        //   notchMargin: 10,
+        child: SizedBox(
+          height: 80,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                // crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: MaterialButton(
+                      minWidth: 40,
+                      onPressed: () {
+                        setState(() {
+                          currentScreen = MySchedulePage();
+                          currentIndex = 0;
+                        });
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.timer_outlined,
+                            size: 30,
+                            color: currentIndex == 0
+                                ? appUiBlueColor
+                                : Colors.grey,
+                          ),
+                          Text(
+                            "My Schedule",
+                            style: TextStyle(
+                              color: currentIndex == 0
+                                  ? appUiBlueColor
+                                  : Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                AnimatedContainer(
-                  duration: Duration(seconds: 1),
-                  curve: Curves.fastLinearToSlowEaseIn,
-                  width: index == currentIndex
-                      ? displayWidth * .40
-                      : displayWidth * .20,
-                  alignment: Alignment.center,
-                  child: Stack(
-                    children: [
-                      Row(
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: MaterialButton(
+                      minWidth: 40,
+                      onPressed: () {
+                        setState(() {
+                          currentScreen = SchedulePage();
+                          currentIndex = 1;
+                        });
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          AnimatedContainer(
-                            duration: Duration(seconds: 1),
-                            curve: Curves.fastLinearToSlowEaseIn,
-                            width:
-                                index == currentIndex ? displayWidth * .13 : 0,
-                          ),
-                          AnimatedOpacity(
-                            opacity: index == currentIndex ? 1 : 0,
-                            duration: Duration(seconds: 1),
-                            curve: Curves.fastLinearToSlowEaseIn,
-                            child: Text(
-                              index == currentIndex
-                                  ? '${listOfStrings[index]}'
-                                  : '',
-                              style: TextStyle(
-                                color: Colors.blueAccent,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          AnimatedContainer(
-                            duration: Duration(seconds: 1),
-                            curve: Curves.fastLinearToSlowEaseIn,
-                            width:
-                                index == currentIndex ? displayWidth * .03 : 20,
-                          ),
                           Icon(
-                            listOfIcons[index],
-                            size: displayWidth * .076,
-                            color: index == currentIndex
-                                ? Colors.blueAccent
-                                : Colors.black26,
+                            Icons.calendar_today_sharp,
+                            size: 30,
+                            color: currentIndex == 1
+                                ? appUiBlueColor
+                                : Colors.grey,
                           ),
+                          Text(
+                            "Schedule",
+                            style: TextStyle(
+                              color: currentIndex == 1
+                                  ? appUiBlueColor
+                                  : Colors.grey,
+                            ),
+                          )
                         ],
                       ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: MaterialButton(
+                      minWidth: 40,
+                      onPressed: () {
+                        setState(() {
+                          currentScreen = NotificationPage();
+                          currentIndex = 2;
+                        });
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.notifications,
+                            size: 30,
+                            color: currentIndex == 2
+                                ? appUiBlueColor
+                                : Colors.grey,
+                          ),
+                          Text(
+                            "Notification",
+                            style: TextStyle(
+                              color: currentIndex == 2
+                                  ? appUiBlueColor
+                                  : Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
           ),
         ),
       ),
     );
   }
-
-  List<String> listOfStrings = ["My Schedule", "Schedule", "Notification"];
-  List<IconData> listOfIcons = [
-    Icons.access_time_filled_rounded,
-    Icons.calendar_today_rounded,
-    Icons.notifications_none
-  ];
 }
