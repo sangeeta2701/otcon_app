@@ -19,7 +19,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/background.png"),
+          image: AssetImage("assets/bg.png"),
         ),
       ),
       child: Scaffold(
@@ -126,7 +126,12 @@ class _RegisterPageState extends State<RegisterPage> {
                   padding: const EdgeInsets.all(20.0),
                   child: GestureDetector(
                     onTap: (() {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage(),),);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginPage(),
+                        ),
+                      );
                     }),
                     child: Container(
                         height: 50,

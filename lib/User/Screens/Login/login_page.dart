@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/background.png"),
+            image: AssetImage("assets/bg.png"),
           ),
         ),
         child: Scaffold(
