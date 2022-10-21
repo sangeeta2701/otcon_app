@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/User/Screens/Profile/profile_page.dart';
 import 'package:otcon/utils/constants.dart';
 
 class MySchedulePage extends StatelessWidget {
@@ -22,7 +23,14 @@ class MySchedulePage extends StatelessWidget {
               ),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  ),
+                );
+              },
               icon: Icon(
                 Icons.person,
                 color: appUiBlueColor,
