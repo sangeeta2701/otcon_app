@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Convener/Screens/Register/convener_register.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/custom_text_field.dart';
@@ -101,12 +102,12 @@ class _ConvenerLoginPageState extends State<ConvenerLoginPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => RegisterPage(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ConvenerRegisterPage(),
+                        ),
+                      );
                     },
                     child: Text(
                       "Register",
