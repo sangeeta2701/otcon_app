@@ -20,6 +20,7 @@ class _RegisterPageState extends State<RegisterPage> {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/bg.png"),
+          fit: BoxFit.cover,
         ),
       ),
       child: Scaffold(

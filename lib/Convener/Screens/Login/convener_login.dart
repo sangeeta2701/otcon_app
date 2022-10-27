@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:otcon/User/Screens/Home%20Page/home_screen.dart';
-import 'package:otcon/User/Screens/Register/register_page.dart';
-import 'package:otcon/widgets/custom_text_field.dart';
 
 import '../../../utils/constants.dart';
+import '../../../widgets/custom_text_field.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class ConvenerLoginPage extends StatefulWidget {
+  const ConvenerLoginPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<ConvenerLoginPage> createState() => _ConvenerLoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ConvenerLoginPageState extends State<ConvenerLoginPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -61,12 +59,12 @@ class _LoginPageState extends State<LoginPage> {
                 padding: const EdgeInsets.all(20.0),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => HomeScreen(),
+                    //   ),
+                    // );
                   },
                   child: Container(
                       height: 50,
@@ -103,12 +101,12 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => RegisterPage(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => RegisterPage(),
+                      //   ),
+                      // );
                     },
                     child: Text(
                       "Register",
