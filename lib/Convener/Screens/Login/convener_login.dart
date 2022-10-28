@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Convener/Home/convener_home_scree.dart';
 import 'package:otcon/Convener/Screens/Register/convener_register.dart';
 
 import '../../../utils/constants.dart';
@@ -60,12 +61,12 @@ class _ConvenerLoginPageState extends State<ConvenerLoginPage> {
                 padding: const EdgeInsets.all(20.0),
                 child: GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => HomeScreen(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ConvenerHomeScreen(),
+                      ),
+                    );
                   },
                   child: Container(
                       height: 50,
