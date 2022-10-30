@@ -18,14 +18,14 @@ class _ConvenerSchedulePageState extends State<ConvenerSchedulePage> {
       appBar: AppBar(
         backgroundColor: appUiLightColor,
         elevation: 0,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: appUiBlueColor,
-            size: 25,
-          ),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {},
+        //   icon: Icon(
+        //     Icons.arrow_back_ios,
+        //     color: appUiBlueColor,
+        //     size: 25,
+        //   ),
+        // ),
         actions: [
           IconButton(
             onPressed: () {},
@@ -45,7 +45,7 @@ class _ConvenerSchedulePageState extends State<ConvenerSchedulePage> {
             Text(
               "Today's Schedule",
               style: GoogleFonts.poppins(
-                fontSize: 30,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
                 color: appUiDarkColor,
                 decoration: TextDecoration.none,

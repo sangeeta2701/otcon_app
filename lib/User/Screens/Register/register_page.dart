@@ -35,7 +35,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 Text(
                   "Register !!",
                   style: GoogleFonts.poppins(
-                    fontSize: 30,
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: appUiDarkColor,
                     decoration: TextDecoration.none,

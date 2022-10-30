@@ -20,7 +20,7 @@ class NotificationPage extends StatelessWidget {
               Text(
                 "Notifications",
                 style: GoogleFonts.poppins(
-                  fontSize: 24,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: appUiDarkColor,
                 ),

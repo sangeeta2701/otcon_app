@@ -31,7 +31,7 @@ class _ConvenerLoginPageState extends State<ConvenerLoginPage> {
               Text(
                 "Log In!!",
                 style: GoogleFonts.poppins(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: appUiDarkColor,
                   decoration: TextDecoration.none,

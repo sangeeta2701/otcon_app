@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Convener/Presentation/Presentation%20List/EIC_list.dart';
 import 'package:otcon/utils/constants.dart';
 
 class PresentationCategoryPage extends StatefulWidget {
@@ -19,7 +20,9 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
         backgroundColor: appUiLightColor,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: appUiBlueColor,
@@ -36,7 +39,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
               Text(
                 "Today's Presentation",
                 style: GoogleFonts.poppins(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: appUiDarkColor,
                   decoration: TextDecoration.none,
@@ -46,7 +49,14 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                 height: 20,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EICPresentationList(),
+                    ),
+                  );
+                },
                 child: Container(
                   height: 60,
                   width: double.infinity,

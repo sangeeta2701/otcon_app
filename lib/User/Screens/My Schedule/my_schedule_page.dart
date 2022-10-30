@@ -48,7 +48,7 @@ class MySchedulePage extends StatelessWidget {
                 child: Text(
                   "Name of the participant",
                   style: GoogleFonts.poppins(
-                    fontSize: 24,
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: appUiDarkColor,
                   ),

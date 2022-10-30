@@ -18,7 +18,7 @@ class SchedulePage extends StatelessWidget {
               Text(
                 "Today's Schedule",
                 style: GoogleFonts.poppins(
-                  fontSize: 24,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: appUiDarkColor,
                 ),
@@ -49,7 +49,7 @@ class SchedulePage extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        "10 A.M.",
+                        "10:00 A.M.",
                         style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w300,
@@ -85,7 +85,7 @@ class SchedulePage extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        "11 A.M. - 1 P.M.",
+                        "11:00 A.M.-1:00 P.M.",
                         style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w300,
