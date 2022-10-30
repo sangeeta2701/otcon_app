@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Convener/Presentation/presentation_catagory_page.dart';
 import 'package:otcon/utils/constants.dart';
 
 class ConvenerSchedulePage extends StatefulWidget {
@@ -90,7 +91,14 @@ class _ConvenerSchedulePageState extends State<ConvenerSchedulePage> {
             ),
             GestureDetector(
               behavior: HitTestBehavior.translucent,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PresentationCategoryPage(),
+                  ),
+                );
+              },
               child: Container(
                 height: 80,
                 width: double.infinity,
