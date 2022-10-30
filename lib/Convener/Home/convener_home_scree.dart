@@ -16,14 +16,14 @@ class ConvenerHomeScreen extends StatefulWidget {
 class _ConvenerHomeScreenState extends State<ConvenerHomeScreen> {
   var currentIndex = 0;
   final List<Widget> screens = [
-    ConvenerScgedulePage(),
+    ConvenerSchedulePage(),
     ConvenerTrackingPage(),
     PresentationStatusPage(),
     ConvenerNotificationPage()
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = ConvenerScgedulePage();
+  Widget currentScreen = ConvenerSchedulePage();
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class _ConvenerHomeScreenState extends State<ConvenerHomeScreen> {
                         minWidth: 40,
                         onPressed: () {
                           setState(() {
-                            currentScreen = ConvenerScgedulePage();
+                            currentScreen = ConvenerSchedulePage();
                             currentIndex = 0;
                           });
                         },
