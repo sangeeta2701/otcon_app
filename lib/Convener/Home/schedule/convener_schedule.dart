@@ -18,14 +18,6 @@ class _ConvenerSchedulePageState extends State<ConvenerSchedulePage> {
       appBar: AppBar(
         backgroundColor: appUiLightColor,
         elevation: 0,
-        // leading: IconButton(
-        //   onPressed: () {},
-        //   icon: Icon(
-        //     Icons.arrow_back_ios,
-        //     color: appUiBlueColor,
-        //     size: 25,
-        //   ),
-        // ),
         actions: [
           IconButton(
             onPressed: () {},
