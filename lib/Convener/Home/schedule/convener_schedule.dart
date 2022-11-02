@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Convener/Home/Profile/convener_profile_page.dart';
 import 'package:otcon/Convener/Presentation/presentation_catagory_page.dart';
 import 'package:otcon/utils/constants.dart';
 
@@ -20,7 +21,14 @@ class _ConvenerSchedulePageState extends State<ConvenerSchedulePage> {
         elevation: 0,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ConvenerProfilePage(),
+                ),
+              );
+            },
             icon: Icon(
               Icons.person,
               color: appUiBlueColor,
