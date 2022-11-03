@@ -5,6 +5,8 @@ import 'package:otcon/Convener/Screens/Login/convener_login.dart';
 import 'package:otcon/User/Screens/Login/login_page.dart';
 import 'package:otcon/utils/constants.dart';
 
+import '../Host/Screens/Login/host_login_page.dart';
+
 class WelcomePge extends StatefulWidget {
   const WelcomePge({Key? key}) : super(key: key);
 
@@ -20,7 +22,7 @@ class _WelcomePgeState extends State<WelcomePge> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => ConvenerLoginPage(),
+          builder: (context) => HostLoginPage(),
         ),
       );
     });
