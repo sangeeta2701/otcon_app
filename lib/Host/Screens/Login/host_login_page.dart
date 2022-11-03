@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Host/Screens/Home/host_home_page.dart';
+import 'package:otcon/Host/Screens/Register/host_register_page.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/custom_text_field.dart';
@@ -59,12 +61,12 @@ class _HostLoginPageState extends State<HostLoginPage> {
                 padding: const EdgeInsets.all(20.0),
                 child: GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => HomeScreen(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HostHomePage(),
+                      ),
+                    );
                   },
                   child: Container(
                       height: 50,
@@ -101,12 +103,12 @@ class _HostLoginPageState extends State<HostLoginPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => RegisterPage(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HostRegisterPage(),
+                        ),
+                      );
                     },
                     child: Text(
                       "Register",
