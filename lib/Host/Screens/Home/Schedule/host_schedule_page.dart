@@ -117,9 +117,7 @@ class _HostSchedulePageState extends State<HostSchedulePage> {
                             fontWeight: FontWeight.w500,
                             color: appUiLightColor),
                       ),
-                      SizedBox(
-                        height: 5,
-                      ),
+                      SizedBox(height: 5),
                       Text(
                         "11:00 A.M.-1:00 P.M.",
                         style: GoogleFonts.poppins(
