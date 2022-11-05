@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/track_presentation_page.dart';
 
 import '../../../../utils/constants.dart';
 
@@ -61,12 +62,12 @@ class _HostStatusPageState extends State<HostStatusPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => EICPresentationList(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TrackPresentationPage(),
+                    ),
+                  );
                 },
                 child: Container(
                   height: 60,
