@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Host/Screens/Home/Profile/host_profile_page.dart';
 
 import '../../../../utils/constants.dart';
 
@@ -21,12 +22,12 @@ class _HostSchedulePageState extends State<HostSchedulePage> {
         actions: [
           IconButton(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => ConvenerProfilePage(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HostProfilePage(),
+                ),
+              );
             },
             icon: Icon(
               Icons.person,
