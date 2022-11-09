@@ -41,9 +41,9 @@ class _LoginPageState extends State<LoginPage> {
                 height: 30,
               ),
               CustomTextField(
-                hintText: "Email",
+                hintText: "Paper Id",
                 type: TextInputType.emailAddress,
-                icon: Icons.email_outlined,
+                icon: Icons.article_outlined,
               ),
               SizedBox(
                 height: 10,

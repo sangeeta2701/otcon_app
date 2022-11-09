@@ -22,7 +22,7 @@ class _WelcomePgeState extends State<WelcomePge> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => HostLoginPage(),
+          builder: (context) => ConvenerLoginPage(),
         ),
       );
     });

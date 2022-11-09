@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:otcon/Host/Screens/Home/host_home_page.dart';
-import 'package:otcon/Host/Screens/Register/host_register_page.dart';
+// import 'package:otcon/Host/Screens/Register/host_register_page.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/custom_text_field.dart';
