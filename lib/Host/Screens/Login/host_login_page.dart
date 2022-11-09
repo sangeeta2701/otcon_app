@@ -90,37 +90,37 @@ class _HostLoginPageState extends State<HostLoginPage> {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Don't have an account ? ",
-                    style: GoogleFonts.poppins(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black45,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HostRegisterPage(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      "Register",
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: appUiBlueColor,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Text(
+              //       "Don't have an account ? ",
+              //       style: GoogleFonts.poppins(
+              //         fontSize: 18,
+              //         fontWeight: FontWeight.w500,
+              //         color: Colors.black45,
+              //       ),
+              //     ),
+              //     GestureDetector(
+              //       onTap: () {
+              //         Navigator.push(
+              //           context,
+              //           MaterialPageRoute(
+              //             builder: (context) => HostRegisterPage(),
+              //           ),
+              //         );
+              //       },
+              //       child: Text(
+              //         "Register",
+              //         style: GoogleFonts.poppins(
+              //           fontSize: 18,
+              //           fontWeight: FontWeight.w500,
+              //           color: appUiBlueColor,
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ),
