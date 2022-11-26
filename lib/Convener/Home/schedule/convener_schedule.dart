@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:otcon/Convener/Home/Profile/convener_profile_page.dart';
+import 'package:otcon/Convener/Home/Summary/daily_summary_page.dart';
 import 'package:otcon/Convener/Presentation/presentation_catagory_page.dart';
 import 'package:otcon/utils/constants.dart';
 
@@ -36,7 +37,14 @@ class _ConvenerSchedulePageState extends State<ConvenerSchedulePage> {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DailySummaryPage(),
+                ),
+              );
+            },
             icon: Icon(
               Icons.receipt,
               color: appUiBlueColor,
