@@ -35,6 +35,14 @@ class _ConvenerSchedulePageState extends State<ConvenerSchedulePage> {
               size: 25,
             ),
           ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.receipt,
+              color: appUiBlueColor,
+              size: 25,
+            ),
+          ),
         ],
       ),
       body: Padding(
