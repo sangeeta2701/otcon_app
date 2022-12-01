@@ -34,6 +34,9 @@ dependencies:
   google_fonts: ^3.0.1
   dotted_border: ^2.0.0+2
   animated_bottom_navigation_bar: ^1.1.0
+  image_picker: ^0.8.6
+  shared_preferences: ^2.0.13
+
   flutter:
     sdk: flutter
 

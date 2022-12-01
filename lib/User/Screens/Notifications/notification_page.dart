@@ -6,7 +6,7 @@ import '../../../utils/constants.dart';
 class NotificationPage extends StatelessWidget {
   const NotificationPage({Key? key}) : super(key: key);
 
-  get appUiDarkColor => null;
+  // get appUiDarkColor => null;
 
   @override
   Widget build(BuildContext context) {

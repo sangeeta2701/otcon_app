@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:otcon/User/Screens/Login/login_page.dart';
 import 'package:otcon/widgets/custom_text_field.dart';
 
@@ -14,6 +17,15 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  XFile? _image;
+
+  getImagefromGallery() async {
+    XFile? image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    setState(() {
+      _image = image;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -89,34 +101,54 @@ class _RegisterPageState extends State<RegisterPage> {
                   height: 20,
                 ),
                 Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Row(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Upload payment receipt",
+                          style: GoogleFonts.poppins(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black45),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            getImagefromGallery();
+                          },
+                          icon: Icon(
+                            Icons.create_new_folder_outlined,
+                            size: 30,
+                            color: Colors.black45,
+                          )),
+                    ],
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.only(left: 20.0, right: 20),
                   child: SizedBox(
-                    child: DottedBorder(
-                      color: Colors.black45,
-                      strokeWidth: 1,
-                      child: Container(
-                        height: 80,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Column(children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.create_new_folder_outlined,
-                                size: 30,
-                                color: Colors.black45,
-                              )),
-                          Text(
-                            "Upload payment receipt",
-                            style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black45),
-                          ),
-                        ]),
+                    child: Container(
+                      height: 100,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: appUigreyColor, width: 1),
+                        borderRadius: BorderRadius.circular(15),
                       ),
+                      child: _image == null
+                          ? Center(child: Text("No image is picked"))
+                          : Image(
+                              height: 80,
+                              width: double.infinity,
+                              image: FileImage(
+                                File(_image!.path),
+                              ),
+                              fit: BoxFit.cover,
+                            ),
                     ),
                   ),
                 ),
