@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:otcon/Convener/Screens/Login/convener_login.dart';
-import 'package:otcon/User/Screens/Login/login_page.dart';
-// import 'package:otcon/User/Screens/Login/login_page.dart';
+// import 'package:otcon/Convener/Screens/Login/convener_login.dart';
+import 'package:otcon/Login/all_login_page.dart';
 // import 'package:otcon/User/Screens/Login/login_page.dart';
 import 'package:otcon/utils/constants.dart';
 
@@ -24,7 +23,7 @@ class _WelcomePgeState extends State<WelcomePge> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => LoginPage(),
+          builder: (context) => AllLoginPage(),
         ),
       );
     });
