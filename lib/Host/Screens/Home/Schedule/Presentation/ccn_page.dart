@@ -11,6 +11,10 @@ class CCNPresentationPage extends StatefulWidget {
 }
 
 class _CCNPresentationPageState extends State<CCNPresentationPage> {
+  bool val1 = false;
+  bool val2 = false;
+  bool val3 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +76,9 @@ class _CCNPresentationPageState extends State<CCNPresentationPage> {
                             width: 180,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: appUiBlueColor,
+                              color: val1 == true
+                                  ? appUiBlueColor
+                                  : appUigreyColor,
                             ),
                             child: Center(
                               child: Text(
@@ -80,7 +86,9 @@ class _CCNPresentationPageState extends State<CCNPresentationPage> {
                                 style: GoogleFonts.poppins(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
-                                  color: appUiLightColor,
+                                  color: val1 == true
+                                      ? appUiLightColor
+                                      : appUiDarkColor,
                                   decoration: TextDecoration.none,
                                 ),
                               ),
@@ -94,7 +102,9 @@ class _CCNPresentationPageState extends State<CCNPresentationPage> {
                             width: 180,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: appUigreyColor,
+                              color: val2 == true
+                                  ? appUiBlueColor
+                                  : appUigreyColor,
                             ),
                             child: Center(
                               child: Text(
@@ -102,7 +112,9 @@ class _CCNPresentationPageState extends State<CCNPresentationPage> {
                                 style: GoogleFonts.poppins(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
-                                  color: appUiDarkColor,
+                                  color: val2 == true
+                                      ? appUiLightColor
+                                      : appUiDarkColor,
                                   decoration: TextDecoration.none,
                                 ),
                               ),
@@ -116,7 +128,9 @@ class _CCNPresentationPageState extends State<CCNPresentationPage> {
                             width: 180,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: appUigreyColor,
+                              color: val3 == true
+                                  ? appUiBlueColor
+                                  : appUigreyColor,
                             ),
                             child: Center(
                               child: Text(
@@ -124,7 +138,9 @@ class _CCNPresentationPageState extends State<CCNPresentationPage> {
                                 style: GoogleFonts.poppins(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
-                                  color: appUiDarkColor,
+                                  color: val3 == true
+                                      ? appUiLightColor
+                                      : appUiDarkColor,
                                   decoration: TextDecoration.none,
                                 ),
                               ),
@@ -146,54 +162,36 @@ class _CCNPresentationPageState extends State<CCNPresentationPage> {
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            height: 45,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: appUigreyColor,
-                            ),
-                            child: Center(
-                              child: Icon(
-                                Icons.done,
-                                color: appUiDarkColor,
-                              ),
-                            ),
-                          ),
+                          Checkbox(
+                              activeColor: appUiBlueColor,
+                              value: this.val1,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  this.val1 = value!;
+                                });
+                              }),
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            height: 45,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: appUigreyColor,
-                            ),
-                            // child: Center(
-                            //   child: Icon(
-                            //     Icons.done,
-                            //     color: appUiDarkColor,
-                            //   ),
-                            // ),
-                          ),
+                          Checkbox(
+                              activeColor: appUiBlueColor,
+                              value: this.val2,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  this.val2 = value!;
+                                });
+                              }),
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            height: 45,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: appUigreyColor,
-                            ),
-                            // child: Center(
-                            //   child: Icon(
-                            //     Icons.done,
-                            //     color: appUiDarkColor,
-                            //   ),
-                            // ),
-                          ),
+                          Checkbox(
+                              activeColor: appUiBlueColor,
+                              value: this.val3,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  this.val3 = value!;
+                                });
+                              }),
                         ],
                       ),
                     ],
