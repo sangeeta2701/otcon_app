@@ -5,6 +5,7 @@ import 'package:otcon/Host/Screens/Home/host_home_page.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/custom_text_field.dart';
+import '../Register/host_register_page.dart';
 
 class HostLoginPage extends StatefulWidget {
   const HostLoginPage({Key? key}) : super(key: key);
@@ -90,37 +91,37 @@ class _HostLoginPageState extends State<HostLoginPage> {
               SizedBox(
                 height: 10,
               ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     Text(
-              //       "Don't have an account ? ",
-              //       style: GoogleFonts.poppins(
-              //         fontSize: 18,
-              //         fontWeight: FontWeight.w500,
-              //         color: Colors.black45,
-              //       ),
-              //     ),
-              //     GestureDetector(
-              //       onTap: () {
-              //         Navigator.push(
-              //           context,
-              //           MaterialPageRoute(
-              //             builder: (context) => HostRegisterPage(),
-              //           ),
-              //         );
-              //       },
-              //       child: Text(
-              //         "Register",
-              //         style: GoogleFonts.poppins(
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w500,
-              //           color: appUiBlueColor,
-              //         ),
-              //       ),
-              //     ),
-              //   ],
-              // ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an account ? ",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black45,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HostRegisterPage(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Register",
+                      style: GoogleFonts.poppins(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: appUiBlueColor,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

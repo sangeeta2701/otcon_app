@@ -5,6 +5,7 @@ import 'package:otcon/Convener/Home/convener_home_scree.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/custom_text_field.dart';
+import '../Register/convener_register.dart';
 
 class ConvenerLoginPage extends StatefulWidget {
   const ConvenerLoginPage({Key? key}) : super(key: key);
@@ -90,37 +91,37 @@ class _ConvenerLoginPageState extends State<ConvenerLoginPage> {
               SizedBox(
                 height: 10,
               ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     Text(
-              //       "Don't have an account ? ",
-              //       style: GoogleFonts.poppins(
-              //         fontSize: 18,
-              //         fontWeight: FontWeight.w500,
-              //         color: Colors.black45,
-              //       ),
-              //     ),
-              //     GestureDetector(
-              //       onTap: () {
-              //         Navigator.push(
-              //           context,
-              //           MaterialPageRoute(
-              //             builder: (context) => ConvenerRegisterPage(),
-              //           ),
-              //         );
-              //       },
-              //       child: Text(
-              //         "Register",
-              //         style: GoogleFonts.poppins(
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.w500,
-              //           color: appUiBlueColor,
-              //         ),
-              //       ),
-              //     ),
-              //   ],
-              // ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an account ? ",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black45,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ConvenerRegisterPage(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Register",
+                      style: GoogleFonts.poppins(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: appUiBlueColor,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

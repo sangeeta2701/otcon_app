@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/ccn_page.dart';
 import 'package:otcon/Host/Screens/Home/Schedule/Presentation/track_presentation_page.dart';
 
 import '../../../../utils/constants.dart';
@@ -16,60 +17,102 @@ class _HostStatusPageState extends State<HostStatusPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appUiLightColor,
-      appBar: AppBar(
-        backgroundColor: appUiLightColor,
-        elevation: 0,
-        // leading: IconButton(
-        //   onPressed: () {
-        //     Navigator.pop(context);
-        //   },
-        //   icon: Icon(
-        //     Icons.arrow_back_ios,
-        //     color: appUiBlueColor,
-        //     size: 25,
-        //   ),
-        // ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Presentation Status",
-                style: GoogleFonts.poppins(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: appUiDarkColor,
-                  decoration: TextDecoration.none,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Presentation Status",
+                  style: GoogleFonts.poppins(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: appUiDarkColor,
+                    decoration: TextDecoration.none,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                "Tracks",
-                style: GoogleFonts.poppins(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: appUiDarkColor,
-                  decoration: TextDecoration.none,
+                SizedBox(
+                  height: 30,
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => TrackPresentationPage(),
+                Text(
+                  "Tracks",
+                  style: GoogleFonts.poppins(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: appUiDarkColor,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TrackPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
                     ),
-                  );
-                },
-                child: Container(
+                    child: Center(
+                      child: Text(
+                        "Emerging And Intelligent Computing",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CCNPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Communication Control And Networking",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
                   height: 60,
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -78,7 +121,7 @@ class _HostStatusPageState extends State<HostStatusPage> {
                   ),
                   child: Center(
                     child: Text(
-                      "Emerging And Intelligent Computing",
+                      "Renewable Energy And Power System",
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
@@ -88,162 +131,118 @@ class _HostStatusPageState extends State<HostStatusPage> {
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: appUiBlueColor,
+                SizedBox(
+                  height: 10,
                 ),
-                child: Center(
-                  child: Text(
-                    "Communication Control And Networking",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: appUiLightColor,
-                      decoration: TextDecoration.none,
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: appUiBlueColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Bio Informatics And Health Care",
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: appUiLightColor,
+                        decoration: TextDecoration.none,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: appUiBlueColor,
+                SizedBox(
+                  height: 10,
                 ),
-                child: Center(
-                  child: Text(
-                    "Renewable Energy And Power System",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: appUiLightColor,
-                      decoration: TextDecoration.none,
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: appUiBlueColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "IOT Automation And Manufacturing",
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: appUiLightColor,
+                        decoration: TextDecoration.none,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: appUiBlueColor,
+                SizedBox(
+                  height: 10,
                 ),
-                child: Center(
-                  child: Text(
-                    "Bio Informatics And Health Care",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: appUiLightColor,
-                      decoration: TextDecoration.none,
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: appUiBlueColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Signal And Image Processing",
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: appUiLightColor,
+                        decoration: TextDecoration.none,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: appUiBlueColor,
+                SizedBox(
+                  height: 10,
                 ),
-                child: Center(
-                  child: Text(
-                    "IOT Automation And Manufacturing",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: appUiLightColor,
-                      decoration: TextDecoration.none,
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: appUiBlueColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Cyber Physical System And Metaverse",
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: appUiLightColor,
+                        decoration: TextDecoration.none,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: appUiBlueColor,
+                SizedBox(
+                  height: 10,
                 ),
-                child: Center(
-                  child: Text(
-                    "Signal And Image Processing",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: appUiLightColor,
-                      decoration: TextDecoration.none,
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: appUiBlueColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Education Enviornment And Economics",
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: appUiLightColor,
+                        decoration: TextDecoration.none,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: appUiBlueColor,
-                ),
-                child: Center(
-                  child: Text(
-                    "Cyber Physical System And Metaverse",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: appUiLightColor,
-                      decoration: TextDecoration.none,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: appUiBlueColor,
-                ),
-                child: Center(
-                  child: Text(
-                    "Education Enviornment And Economics",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: appUiLightColor,
-                      decoration: TextDecoration.none,
-                    ),
-                  ),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
