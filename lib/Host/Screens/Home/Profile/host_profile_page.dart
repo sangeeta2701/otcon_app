@@ -15,57 +15,57 @@ class HostProfilePage extends StatefulWidget {
 class _HostProfilePageState extends State<HostProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
+      backgroundColor: appUiLightColor,
+      appBar: AppBar(
         backgroundColor: appUiLightColor,
-        appBar: AppBar(
-          backgroundColor: appUiLightColor,
-          elevation: 0,
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
+        elevation: 0,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: appUiDarkColor,
+            )),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HostLoginPage(),
+                  ),
+                );
               },
-              icon: Icon(
-                Icons.arrow_back_ios,
-                color: appUiDarkColor,
-              )),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => HostLoginPage(),
-                    ),
-                  );
-                },
-                child: Row(
-                  children: [
-                    Text(
-                      "Logout",
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: appUiBlueColor,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Icon(
-                      Icons.logout,
+              child: Row(
+                children: [
+                  Text(
+                    "Logout",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                       color: appUiBlueColor,
-                      size: 25,
-                    )
-                  ],
-                ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    Icons.logout,
+                    color: appUiBlueColor,
+                    size: 25,
+                  )
+                ],
               ),
-            )
-          ],
-        ),
-        body: SingleChildScrollView(
+            ),
+          )
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(
                 top: 40.0, left: 20, right: 20.0, bottom: 50.0),
