@@ -104,12 +104,12 @@ class _HostLoginPageState extends State<HostLoginPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HostRegisterPage(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => HostRegisterPage(),
+                      //   ),
+                      // );
                     },
                     child: Text(
                       "Register",

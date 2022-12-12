@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:otcon/Host/Screens/Home/Schedule/Presentation/ccn_page.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/reps_page.dart';
 import 'package:otcon/Host/Screens/Home/Schedule/Presentation/track_presentation_page.dart';
 
 import '../../../../utils/constants.dart';
@@ -112,21 +113,31 @@ class _HostStatusPageState extends State<HostStatusPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: appUiBlueColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Renewable Energy And Power System",
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: appUiLightColor,
-                        decoration: TextDecoration.none,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => REPSPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Renewable Energy And Power System",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
                   ),
