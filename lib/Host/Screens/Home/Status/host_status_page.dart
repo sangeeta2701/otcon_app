@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/bihc_page.dart';
 import 'package:otcon/Host/Screens/Home/Schedule/Presentation/ccn_page.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/cpsm_page.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/eeae_page.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/iaam_page.dart';
 import 'package:otcon/Host/Screens/Home/Schedule/Presentation/reps_page.dart';
+import 'package:otcon/Host/Screens/Home/Schedule/Presentation/sip_page.dart';
 import 'package:otcon/Host/Screens/Home/Schedule/Presentation/track_presentation_page.dart';
 
 import '../../../../utils/constants.dart';
@@ -18,10 +23,10 @@ class _HostStatusPageState extends State<HostStatusPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appUiLightColor,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -145,21 +150,31 @@ class _HostStatusPageState extends State<HostStatusPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: appUiBlueColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Bio Informatics And Health Care",
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: appUiLightColor,
-                        decoration: TextDecoration.none,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BIHCPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Bio Informatics And Health Care",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
                   ),
@@ -167,21 +182,31 @@ class _HostStatusPageState extends State<HostStatusPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: appUiBlueColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "IOT Automation And Manufacturing",
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: appUiLightColor,
-                        decoration: TextDecoration.none,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => IAAMPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "IOT Automation And Manufacturing",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
                   ),
@@ -189,21 +214,31 @@ class _HostStatusPageState extends State<HostStatusPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: appUiBlueColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Signal And Image Processing",
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: appUiLightColor,
-                        decoration: TextDecoration.none,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SIPPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Signal And Image Processing",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
                   ),
@@ -211,21 +246,31 @@ class _HostStatusPageState extends State<HostStatusPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: appUiBlueColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Cyber Physical System And Metaverse",
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: appUiLightColor,
-                        decoration: TextDecoration.none,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CPSAMPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Cyber Physical System And Metaverse",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
                   ),
@@ -233,21 +278,31 @@ class _HostStatusPageState extends State<HostStatusPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: appUiBlueColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Education Enviornment And Economics",
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: appUiLightColor,
-                        decoration: TextDecoration.none,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EEAEPresentationPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: appUiBlueColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Education Enviornment And Economics",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: appUiLightColor,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
                   ),

@@ -22,12 +22,12 @@ class _HostSchedulePageState extends State<HostSchedulePage> {
         actions: [
           IconButton(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => HostProfilePage(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HostProfilePage(),
+                ),
+              );
             },
             icon: Icon(
               Icons.person,
