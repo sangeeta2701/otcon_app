@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:otcon/Host/Screens/Login/host_login_page.dart';
 
+import '../../../../User/Screens/Home Page/home_screen.dart';
 import '../../../../utils/constants.dart';
 import '../../../../widgets/custom_text_field.dart';
 
@@ -123,12 +124,12 @@ class _HostProfilePageState extends State<HostProfilePage> {
                   padding: const EdgeInsets.all(15.0),
                   child: GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => HomeScreen(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
                     },
                     child: Container(
                         height: 50,
