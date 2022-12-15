@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "482082778874",
+    "project_id": "otcon-61f55",
+    "storage_bucket": "otcon-61f55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482082778874:android:cad8f1f3f91106a6f12343",
+        "android_client_info": {
+          "package_name": "com.example.otcon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482082778874-9fu7a21pstiuasij381k71mpv7l6gct0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA_Nj5YDn2f1ZmxfhBIaUqPgdY7-8F-6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482082778874-9fu7a21pstiuasij381k71mpv7l6gct0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
