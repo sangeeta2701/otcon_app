@@ -107,37 +107,37 @@ class _ConvenerRegisterPageState extends State<ConvenerRegisterPage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Already have an account ? ",
-                          style: GoogleFonts.poppins(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black45,
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ConvenerLoginPage(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            "Login",
-                            style: GoogleFonts.poppins(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              color: appUiBlueColor,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    // child: Column(
+                    //   mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: [
+                    //     Text(
+                    //       "Already have an account ? ",
+                    //       style: GoogleFonts.poppins(
+                    //         fontSize: 18,
+                    //         fontWeight: FontWeight.w500,
+                    //         color: Colors.black45,
+                    //       ),
+                    //     ),
+                    //     GestureDetector(
+                    //       onTap: () {
+                    //         Navigator.push(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //             builder: (context) => ConvenerLoginPage(),
+                    //           ),
+                    //         );
+                    //       },
+                    //       child: Text(
+                    //         "Login",
+                    //         style: GoogleFonts.poppins(
+                    //           fontSize: 18,
+                    //           fontWeight: FontWeight.w500,
+                    //           color: appUiBlueColor,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ),
                 ],
               ),

@@ -47,7 +47,7 @@ class _ConvenerTrackingPageState extends State<ConvenerTrackingPage> {
               height: 20,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
                   height: 100,

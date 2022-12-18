@@ -17,7 +17,7 @@ class _ConvenerNotificationPageState extends State<ConvenerNotificationPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 20.0),
+          padding: const EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

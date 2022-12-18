@@ -67,7 +67,7 @@ class _ConvenerProfilePageState extends State<ConvenerProfilePage> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-              top: 40.0, left: 20, right: 20.0, bottom: 50.0),
+              top: 30.0, left: 20, right: 20.0, bottom: 50.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

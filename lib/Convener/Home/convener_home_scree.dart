@@ -57,7 +57,7 @@ class _ConvenerHomeScreenState extends State<ConvenerHomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(
-                              Icons.calendar_today_sharp,
+                              Icons.calendar_month_outlined,
                               size: 30,
                               color: currentIndex == 0
                                   ? appUiBlueColor
