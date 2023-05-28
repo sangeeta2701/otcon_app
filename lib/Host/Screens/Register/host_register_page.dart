@@ -25,7 +25,7 @@ class _HostRegisterPageState extends State<HostRegisterPage> {
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(top: 80.0),
+              padding: const EdgeInsets.only(top: 80.0,left: 20,right: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,

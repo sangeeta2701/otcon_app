@@ -1,7 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:otcon/User/Screens/Login/login_page.dart';
 import 'package:otcon/utils/constants.dart';
 import 'package:otcon/widgets/custom_text_field.dart';
+import 'package:otcon/widgets/snackbar.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -11,6 +16,74 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  setProfilePic() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ListTile(
+                  title: const Text(
+                    "Choose existing photo",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  minVerticalPadding: 0,
+                  dense: true,
+                  onTap: () {
+                    Navigator.pop(context);
+                    imagePickerGallery();
+                  },
+                ),
+                ListTile(
+                  title:
+                      const Text("Take photo", style: TextStyle(fontSize: 16)),
+                  minVerticalPadding: 0,
+                  dense: true,
+                  onTap: () {
+                    Navigator.pop(context);
+                    imagePickerCamera();
+                  },
+                ),
+              ],
+            ),
+          );
+        });
+  }
+
+  File? _image;
+  final imagePick = ImagePicker();
+  Future imagePickerGallery() async {
+    final pick = await imagePick.pickImage(source: ImageSource.gallery);
+    setState(() {
+      if (pick != null) {
+        _image = File(pick.path);
+        print("SANG: " + pick.path);
+      } else {
+        showInSnackbar(
+          context,
+          "No file selected",
+        );
+      }
+    });
+  }
+
+  Future imagePickerCamera() async {
+    final pick = await imagePick.pickImage(source: ImageSource.camera);
+    setState(() {
+      if (pick != null) {
+        _image = File(pick.path);
+        print("SANG: " + pick.path);
+      } else {
+        showInSnackbar(
+          context,
+          "No file selected",
+        );
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +92,9 @@ class _ProfilePageState extends State<ProfilePage> {
         backgroundColor: appUiLightColor,
         elevation: 0,
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.arrow_back_ios,
               color: appUiDarkColor,
@@ -27,25 +102,31 @@ class _ProfilePageState extends State<ProfilePage> {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text(
-                  "Logout",
-                  style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: appUiBlueColor,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginPage()));
+              },
+              child: Row(
+                children: [
+                  Text(
+                    "Logout",
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: appUiBlueColor,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Icon(
-                  Icons.logout,
-                  color: appUiBlueColor,
-                  size: 25,
-                )
-              ],
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    Icons.logout,
+                    color: appUiBlueColor,
+                    size: 25,
+                  )
+                ],
+              ),
             ),
           )
         ],
@@ -57,14 +138,30 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
-                backgroundColor: appUigreyColor,
-                radius: 80,
-                child: Center(
-                    child: Icon(
-                  Icons.person,
-                  size: 50,
-                )),
+              GestureDetector(
+                onTap: () {
+                  setProfilePic();
+                },
+                child: _image == null
+                    ? CircleAvatar(
+                        backgroundColor: appUigreyColor,
+                        radius: 60,
+                        child: Center(
+                            child: Icon(
+                          Icons.person,
+                          size: 50,
+                        )),
+                      )
+                    : Container(
+                        height: 130,
+                        width: 140,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: appUigreyColor,
+                            image: DecorationImage(
+                                image: FileImage(_image!), fit: BoxFit.cover)),
+                        // child: Image.file(_image!,fit: BoxFit.cover,),
+                      ),
               ),
               SizedBox(
                 height: 40,

@@ -14,14 +14,14 @@ class MySchedulePage extends StatelessWidget {
           backgroundColor: appUiLightColor,
           elevation: 0,
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.qr_code,
-                color: appUiBlueColor,
-                size: 30,
-              ),
-            ),
+            // IconButton(
+            //   onPressed: () {},
+            //   icon: Icon(
+            //     Icons.qr_code,
+            //     color: appUiBlueColor,
+            //     size: 30,
+            //   ),
+            // ),
             IconButton(
               onPressed: () {
                 Navigator.push(

@@ -1,10 +1,14 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:otcon/Host/Screens/Login/host_login_page.dart';
 
 import '../../../../User/Screens/Home Page/home_screen.dart';
 import '../../../../utils/constants.dart';
 import '../../../../widgets/custom_text_field.dart';
+import '../../../../widgets/snackbar.dart';
 
 class HostProfilePage extends StatefulWidget {
   const HostProfilePage({Key? key}) : super(key: key);
@@ -14,6 +18,74 @@ class HostProfilePage extends StatefulWidget {
 }
 
 class _HostProfilePageState extends State<HostProfilePage> {
+
+
+setProfilePic() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ListTile(
+                  title: const Text(
+                    "Choose existing photo",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  minVerticalPadding: 0,
+                  dense: true,
+                  onTap: () {
+                    Navigator.pop(context);
+                    imagePickerGallery();
+                  },
+                ),
+                ListTile(
+                  title:
+                      const Text("Take photo", style: TextStyle(fontSize: 16)),
+                  minVerticalPadding: 0,
+                  dense: true,
+                  onTap: () {
+                    Navigator.pop(context);
+                    imagePickerCamera();
+                  },
+                ),
+              ],
+            ),
+          );
+        });
+  }
+File? _image;
+  final imagePick = ImagePicker();
+  Future imagePickerGallery() async {
+    final pick = await imagePick.pickImage(source: ImageSource.gallery);
+    setState(() {
+      if (pick != null) {
+        _image = File(pick.path);
+        print("SANG: " + pick.path);
+      } else {
+        showInSnackbar(
+            context, "No file selected",);
+      }
+    });
+  }
+
+  Future imagePickerCamera() async {
+    final pick = await imagePick.pickImage(source: ImageSource.camera);
+    setState(() {
+      if (pick != null) {
+        _image = File(pick.path);
+        print("SANG: " + pick.path);
+      } else {
+        showInSnackbar(
+            context, "No file selected",);
+      }
+    });
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,15 +145,29 @@ class _HostProfilePageState extends State<HostProfilePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CircleAvatar(
+                GestureDetector(
+                onTap: () {
+                  setProfilePic();
+                },
+                child:_image == null ? CircleAvatar(
                   backgroundColor: appUigreyColor,
-                  radius: 80,
+                  radius: 60,
                   child: Center(
-                      child: Icon(
-                    Icons.person,
-                    size: 50,
-                  )),
-                ),
+                          child: Icon(
+                          Icons.person,
+                          size: 50,
+                        ))
+                      ,
+                ):Container(
+                  height: 130,
+                  width: 140,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: appUigreyColor,
+                    image: DecorationImage(image: FileImage(_image!),fit: BoxFit.cover)
+                  ),
+                  // child: Image.file(_image!,fit: BoxFit.cover,),
+                  ),),
                 SizedBox(
                   height: 40,
                 ),
