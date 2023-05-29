@@ -8,6 +8,8 @@ import 'package:otcon/utils/constants.dart';
 import 'package:otcon/widgets/custom_text_field.dart';
 import 'package:otcon/widgets/snackbar.dart';
 
+import '../Home Page/home_screen.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -212,12 +214,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.all(15.0),
                 child: GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => HomeScreen(),
-                    //   ),
-                    // );
+                  showInSnackbar(context, "Profile Updated Successfully!!");
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ),
+                    );
                   },
                   child: Container(
                       height: 50,

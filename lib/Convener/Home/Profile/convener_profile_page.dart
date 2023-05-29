@@ -3,8 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:otcon/Convener/Home/convener_home_scree.dart';
 import 'package:otcon/Convener/Screens/Login/convener_login.dart';
 
+import '../../../User/Screens/Home Page/home_screen.dart';
 import '../../../utils/constants.dart';
 import '../../../widgets/custom_text_field.dart';
 import '../../../widgets/snackbar.dart';
@@ -17,8 +19,7 @@ class ConvenerProfilePage extends StatefulWidget {
 }
 
 class _ConvenerProfilePageState extends State<ConvenerProfilePage> {
-
-setProfilePic() {
+  setProfilePic() {
     showDialog(
         context: context,
         builder: (context) {
@@ -86,7 +87,6 @@ setProfilePic() {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -149,25 +149,27 @@ setProfilePic() {
                 onTap: () {
                   setProfilePic();
                 },
-                child:_image == null ? CircleAvatar(
-                  backgroundColor: appUigreyColor,
-                  radius: 60,
-                  child: Center(
-                          child: Icon(
+                child: _image == null
+                    ? CircleAvatar(
+                        backgroundColor: appUigreyColor,
+                        radius: 60,
+                        child: Center(
+                            child: Icon(
                           Icons.person,
                           size: 50,
-                        ))
-                      ,
-                ):Container(
-                  height: 130,
-                  width: 140,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: appUigreyColor,
-                    image: DecorationImage(image: FileImage(_image!),fit: BoxFit.cover)
-                  ),
-                  // child: Image.file(_image!,fit: BoxFit.cover,),
-                  ),),
+                        )),
+                      )
+                    : Container(
+                        height: 130,
+                        width: 140,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: appUigreyColor,
+                            image: DecorationImage(
+                                image: FileImage(_image!), fit: BoxFit.cover)),
+                        // child: Image.file(_image!,fit: BoxFit.cover,),
+                      ),
+              ),
               SizedBox(
                 height: 40,
               ),
@@ -210,12 +212,13 @@ setProfilePic() {
                 padding: const EdgeInsets.all(15.0),
                 child: GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => HomeScreen(),
-                    //   ),
-                    // );
+                    showInSnackbar(context, "Profile Updated Successfully!!");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ConvenerHomeScreen(),
+                      ),
+                    );
                   },
                   child: Container(
                       height: 50,

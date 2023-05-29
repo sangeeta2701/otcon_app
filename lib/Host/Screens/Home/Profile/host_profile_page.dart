@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:otcon/Host/Screens/Home/host_home_page.dart';
 import 'package:otcon/Host/Screens/Login/host_login_page.dart';
 
 import '../../../../User/Screens/Home Page/home_screen.dart';
@@ -210,10 +211,12 @@ File? _image;
                   padding: const EdgeInsets.all(15.0),
                   child: GestureDetector(
                     onTap: () {
+                        showInSnackbar(context, "Profile Updated Successfully!!");
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
+                          builder: (context) => HostHomePage(),
                         ),
                       );
                     },

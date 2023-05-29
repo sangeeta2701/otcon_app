@@ -36,6 +36,7 @@ dependencies:
   animated_bottom_navigation_bar: ^1.1.0
   image_picker: ^0.8.6
   shared_preferences: ^2.0.13
+  dropdown_textfield: ^1.0.8
 
   #google sign
   # firebase_auth: ^4.2.0
