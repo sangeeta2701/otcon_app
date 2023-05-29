@@ -68,7 +68,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                     child: Text(
                       "Emerging And Intelligent Computing",
                       style: GoogleFonts.poppins(
-                        fontSize: 16,
+                        fontSize: 15,
                         fontWeight: FontWeight.w500,
                         color: appUiLightColor,
                         decoration: TextDecoration.none,
@@ -91,7 +91,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                   child: Text(
                     "Communication Control And Networking",
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: appUiLightColor,
                       decoration: TextDecoration.none,
@@ -113,7 +113,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                   child: Text(
                     "Renewable Energy And Power System",
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: appUiLightColor,
                       decoration: TextDecoration.none,
@@ -135,7 +135,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                   child: Text(
                     "Bio Informatics And Health Care",
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: appUiLightColor,
                       decoration: TextDecoration.none,
@@ -157,7 +157,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                   child: Text(
                     "IOT Automation And Manufacturing",
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: appUiLightColor,
                       decoration: TextDecoration.none,
@@ -179,7 +179,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                   child: Text(
                     "Signal And Image Processing",
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: appUiLightColor,
                       decoration: TextDecoration.none,
@@ -201,7 +201,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                   child: Text(
                     "Cyber Physical System And Metaverse",
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: appUiLightColor,
                       decoration: TextDecoration.none,
@@ -223,7 +223,7 @@ class _PresentationCategoryPageState extends State<PresentationCategoryPage> {
                   child: Text(
                     "Education Enviornment And Economics",
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: appUiLightColor,
                       decoration: TextDecoration.none,

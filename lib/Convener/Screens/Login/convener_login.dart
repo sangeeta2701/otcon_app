@@ -50,7 +50,7 @@ class _ConvenerLoginPageState extends State<ConvenerLoginPage> {
                   ),
                   TextFormField(
                     controller: emailController,
-                    keyboardType: TextInputType.text,
+                    keyboardType: TextInputType.emailAddress,
                     obscureText: false,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(

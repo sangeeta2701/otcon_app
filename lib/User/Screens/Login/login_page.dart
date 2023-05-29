@@ -68,10 +68,10 @@ class _LoginPageState extends State<LoginPage> {
                       if (value == null || value.trim().isEmpty) {
                         return "This field is required";
                       }
-                      if (value.trim().length < 5) {
+                      if (value.trim().length < 3) {
                         return "Please enter correct paper id";
                       }
-                      if (value.trim().length > 12) {
+                      if (value.trim().length > 7) {
                         return "Please enter correct paper id";
                       }
                       return null;
